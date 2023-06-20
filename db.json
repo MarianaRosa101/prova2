@@ -1,0 +1,11 @@
+{
+  "empresas": [
+    {
+      "nome": "granja galinha infeliz ltda.",
+      "cnpj": "3030303030",
+      "email": "granjaqq@gmil.com",
+      "telefone": "34342323",
+      "id": 2
+    }
+  ]
+}
