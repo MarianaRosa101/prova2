@@ -1,0 +1,58 @@
+<div class="container">
+    <h2>Cadastro de Empresa</h2>
+  
+    <form [formGroup]="empresaForm" (ngSubmit)="cadastrar()">
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" formControlName="nome" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" formControlName="cnpj" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" formControlName="email" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="telefone" formControlName="telefone" class="form-control">
+      </div>
+  
+
+  
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <br>
+    </form>
+  
+  
+    <h2>Empresas Cadastradas</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>CNPJ</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empresa of empresas">
+          <td>{{ empresa.id }}</td>
+          <td>{{ empresa.nome }}</td>
+          <td>{{ empresa.cnpj }}</td>
+          <td>{{ empresa.email }}</td>
+          <td>{{ empresa.telefone }}</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-sm" (click)="remover(empresa.id)">Remover</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
